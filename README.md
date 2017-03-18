@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Rails Bootstrap Devise
 ================
 
@@ -48,3 +49,6 @@ Credits
 
 License
 -------
+=======
+# rails-bootstrap-devise
+>>>>>>> fb80a216398008c6715b53cfd7f242cf649d0ce3
