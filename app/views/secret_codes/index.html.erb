@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Secret Codes</h1>
+
+<button type="button" class="btn btn-primary pull-right">
+  <%= link_to "Log Out", destroy_user_session_path %>
+</button>
+
+<br>
+
+<%= form_tag("/generate_codes", method: "post") do %>
+  <div class="form-group row">
+    <%= select_tag("codes", options_for_select(["1", "10", "20", "50", "100"], selected: "10"), {class: "col-md-1 form-control"}) %> &nbsp;&nbsp;
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+      <i class="icon-ok icon-white"></i> Generate Secret Codes
+    <% end %>
+  </div>
+<% end %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secret_codes.each do |secret_code| %>
+      <tr>
+        <td><%= secret_code.code %></td>
+        <%email = (user = secret_code.user) ? user.email : "" %>
+        <td><%= email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

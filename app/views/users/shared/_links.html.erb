@@ -1,0 +1,12 @@
+<%- if controller_name != 'sessions' %>
+  <button type="button" class="btn btn-primary pull-right">
+    <%= link_to "Log in", new_user_session_path %>
+  </button>
+<% end -%>
+
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <button type="button" class="btn btn-primary pull-right">
+    <%= link_to "Sign up", new_user_registration_path %>
+  </button>
+<% end -%>
