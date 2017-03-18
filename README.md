@@ -30,9 +30,17 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 
 Getting Started
 ---------------
+1. git clone repo
+2. cd repo/
+3. bundle install
+4. Change database.yml accordingly
+5. rake db:create db:migrate db:seed
 
 Documentation and Support
 -------------------------
+Seed Data
+
+1. Admin User:- email: admin@test.com, password: foobar
 
 Issues
 -------------
